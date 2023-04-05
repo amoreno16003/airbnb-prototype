@@ -1,0 +1,10 @@
+.NavbarImageContainer{
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+}
+#AirbnbImage{
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 30px;
+    width: 82px;
+    height: 25px;
+}

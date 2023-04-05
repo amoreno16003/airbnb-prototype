@@ -1,0 +1,19 @@
+.CardRoot{
+    margin-left: 36px;
+    
+}
+.ratings{
+    display: flex;
+    align-items: center;
+}
+.StarImage{
+    width: 14px;
+    height: 14px;
+}
+.bold{
+    font-weight: bold;
+}
+
+.gray{
+    color: gray;
+}
