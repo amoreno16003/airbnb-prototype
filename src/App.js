@@ -12,14 +12,8 @@ function App() {
 
   const PeopleElements = PeopleData.map(function(person){
     return <Card 
-    id={person.id}
-    title={person.title}
-    description={person.description}
-    price={person.price}
-    image={person.image}
-    stats={person.stats}
-    location={person.location}
-    openSpots={person.openSpots}
+    key={person.id}
+    item={person}
     />
   })
   return (

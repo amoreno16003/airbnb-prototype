@@ -4,32 +4,30 @@ import star from '../images/star.png'
 import '../css/Card.css'
 
 const Card = (props) => {
-    console.log(props)
-    const date = new Date()
-    const hours = date.getHours()
-    let timeOfDay 
-    if (hours < 12){
-        timeOfDay = "morning"
-    }
-    else if (hours >= 12 && hours < 17){
-        timeOfDay = "evening"
-    }
-    else{
-        timeOfDay = "night"
-    }
+    let badgeText 
+        if(props.item.openSpots === 0){
+            badgeText = 'SOLD OUT'
+        } else if(props.item.location === 'Online'){
+            badgeText = 'ONLINE'
+        } 
+        else{
+            badgeText = 'NONE'
+        }
+    
   return (
     <div className='CardRoot'>
-        <img src={`../images/${props.image}`} className='CoverImage' alt="" />
+        {badgeText !== 'NONE' && <div className='card-badge'>{badgeText}</div>}
+        <img src={`../images/${props.item.image}`} className='CoverImage' alt="" />
         <div className='ratings'>
             <div>
                 <img src={star} className="StarImage" alt="" />
-                <span>{props.stats.rating}</span>
+                <span>{props.item.stats.rating}</span>
             </div>
-            <span className='gray'>({props.stats.reviewCount})* </span>
-            <span className='gray'>USA</span>
+            <span className='gray'>({props.item.stats.reviewCount})* </span>
+            <span className='gray'>{props.item.location}</span>
         </div>
-        <p className='bold'>{props.title} {props.name}</p>
-        <p><span className='bold'>From {props.price}$</span> / person</p>
+        <p className='bold'>{props.item.title} {props.item.name}</p>
+        <p><span className='bold'>From {props.item.price}$</span> / person</p>
         {/* <p>It is {timeOfDay}</p> */}
     </div>
   )

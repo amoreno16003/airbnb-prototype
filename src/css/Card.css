@@ -27,3 +27,14 @@
 .gray{
     color: gray;
 }
+
+.card-badge{
+    position: absolute;
+    background-color: #f5c518;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px;
+    font-weight: bold;
+}
