@@ -21,7 +21,7 @@ const Navbar = () => {
     <div id='NavbarRoot'>
         <div className='NavbarImageContainer'>
             <img src={airbnblogo} alt="" id='AirbnbImage'/>
-            <h1>{pokemonList}</h1>
+            {/* <h1>{pokemonList}</h1> */}
         </div>
     </div>
   )

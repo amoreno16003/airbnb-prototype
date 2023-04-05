@@ -19,16 +19,18 @@ const Card = (props) => {
     }
   return (
     <div className='CardRoot'>
-        <img src={props.image} className='SwimmerImage' alt="" />
+        <img src={`../images/${props.image}`} className='CoverImage' alt="" />
         <div className='ratings'>
-            <img src={star} className="StarImage" alt="" />
-            <span>{props.rating}</span>
-            <span className='gray'>(6)* </span>
-            <span className='gray'>  {props.country}</span>
+            <div>
+                <img src={star} className="StarImage" alt="" />
+                <span>{props.stats.rating}</span>
+            </div>
+            <span className='gray'>({props.stats.reviewCount})* </span>
+            <span className='gray'>USA</span>
         </div>
-        <p className='bold'>{props.description} {props.name}</p>
-        <p><span className='Amount'>From {props.price}</span> / person</p>
-        <p>It is {timeOfDay}</p>
+        <p className='bold'>{props.title} {props.name}</p>
+        <p><span className='bold'>From {props.price}$</span> / person</p>
+        {/* <p>It is {timeOfDay}</p> */}
     </div>
   )
 }
